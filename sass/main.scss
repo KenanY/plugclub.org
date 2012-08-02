@@ -3,12 +3,8 @@
 @import "settings";
 @import "foundation";
 
+@import "typography";
 @import "navigation";
-
-#slideshow { background: image-url("foundation/orbit/loading.gif") center center #f4f4f4; height: 300px; }
-#slideshow img { display: none; }
-#slideshow.orbit { background: none; }
-#slideshow.orbit img { display: block; }
 
 ::-moz-selection {
     background: #b3d4fc;
@@ -18,3 +14,6 @@
     background: #b3d4fc;
     text-shadow: none;
 }
+
+// For debugging
+@import "holmes";

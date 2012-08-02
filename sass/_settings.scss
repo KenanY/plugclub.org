@@ -1,12 +1,18 @@
+// ==========================================================================
+// Settings
+// ==========================================================================
+
 @import "foundation/functions/modular-scale";
 
-// Grid Settings
+// Grid
+// ==========================================================================
 $rowWidth: 960px;
 $columnGutter: 30px;
 $totalColumns: 12;
 $mobileTotalColumns: 4;
 
-// Colors Settings
+// Colors
+// ==========================================================================
 $mainColor: #2ba6cb;
 $secondaryColor: #e9e9e9;
 $alertColor: #c60f13;
@@ -18,26 +24,48 @@ $white: #fff;
 $shinyEdge: rgba(#fff, .5);
 $darkEdge: rgba(#000, .2);
 
-// Button Settings
+// Buttons
+// ==========================================================================
 $buttonRadius: 3px;
 $btnBase: 10px;
 $tinyBtnBase: $btnBase - 5;
 $smallBtnBase: $btnBase - 3;
 $largeBtnBase: $btnBase + 5;
 
-// Form Settings
+// Forms
+// ==========================================================================
 $formSpacing: 12px;
 
-// Tab Settings
+// Tabs
+// ==========================================================================
 $tabHeight: 40px;
 
-// Nav Bar Settings
+// Navigation
+// ==========================================================================
 $navBarHeight: 40px;
 $navFlyoutBaseWidth: 250px;
+$nav-border-top: #f0f6ed;
+$nav-border-bottom: #f0f6ed;
 
 // Modular Scale
+// ==========================================================================
 $ratio: $golden;
 $base-size: 14px 44px;
 
-$nav-border-top: #f0f6ed;
-$nav-border-bottom: #f0f6ed;
+$type-border: #ddd;
+
+// Typography
+// ==========================================================================
+$blockquote: $type-border;
+$sans: "PT Sans", "Helvetica Neue", Arial, sans-serif;
+$serif: "PT Serif", Georgia, Times, "Times New Roman", serif;
+$mono: Menlo, Monaco, "Andale Mono", "lucida console", "Courier New", monospace;
+$heading-font-family: "PT Serif", "Georgia", "Helvetica Neue", Arial, sans-serif;
+$header-title-font-family: $heading-font-family;
+$header-subtitle-font-family: $heading-font-family;
+$h1: ms(5);
+$h2: ms(4);
+$h3: ms(3);
+$h4: ms(2);
+$h5: ms(1);
+$h6: ms(0);
