@@ -1,8 +1,9 @@
 // ==========================================================================
 // Settings
 // ==========================================================================
-
 @import "foundation/functions/modular-scale";
+
+
 
 // Grid
 // ==========================================================================
@@ -10,6 +11,17 @@ $rowWidth: 960px;
 $columnGutter: 30px;
 $totalColumns: 12;
 $mobileTotalColumns: 4;
+
+
+
+// Padding used for layout margins
+// ==========================================================================
+$pad-min: 18px;
+$pad-narrow: 25px;
+$pad-medium: 35px;
+$pad-wide: 55px;
+
+
 
 // Colors
 // ==========================================================================
@@ -23,6 +35,18 @@ $black: #000;
 $white: #fff;
 $shinyEdge: rgba(#fff, .5);
 $darkEdge: rgba(#000, .2);
+$type-border: #ddd;
+
+
+
+// Links
+// ==========================================================================
+$link-color: lighten(#165b94, 3) !default;
+$link-color-hover: adjust-color($link-color, $lightness: 10, $saturation: 25) !default;
+$link-color-visited: adjust-color($link-color, $hue: 80, $lightness: -4) !default;
+$link-color-active: adjust-color($link-color-hover, $lightness: -15) !default;
+
+
 
 // Buttons
 // ==========================================================================
@@ -32,27 +56,43 @@ $tinyBtnBase: $btnBase - 5;
 $smallBtnBase: $btnBase - 3;
 $largeBtnBase: $btnBase + 5;
 
+
+
 // Forms
 // ==========================================================================
 $formSpacing: 12px;
+
+
 
 // Tabs
 // ==========================================================================
 $tabHeight: 40px;
 
+
+
 // Navigation
 // ==========================================================================
 $navBarHeight: 40px;
 $navFlyoutBaseWidth: 250px;
-$nav-border-top: #f0f6ed;
-$nav-border-bottom: #f0f6ed;
+$nav-bg: #fff;
+$nav-bg-front: $nav-bg;
+$nav-bg-back: $nav-bg;
+$nav-color: darken($nav-bg, 38);
+$nav-color-hover: darken($nav-color, 25);
+$nav-border: #f0f6ed;
+$nav-border-top: $nav-border;
+$nav-border-bottom: $nav-border;
+$nav-border-left: $nav-border;
+$nav-border-right: $nav-border;
+
+
 
 // Modular Scale
 // ==========================================================================
 $ratio: $golden;
 $base-size: 14px 44px;
 
-$type-border: #ddd;
+
 
 // Typography
 // ==========================================================================
@@ -63,9 +103,28 @@ $mono: Menlo, Monaco, "Andale Mono", "lucida console", "Courier New", monospace;
 $heading-font-family: "PT Serif", "Georgia", "Helvetica Neue", Arial, sans-serif;
 $header-title-font-family: $heading-font-family;
 $header-subtitle-font-family: $heading-font-family;
+$header-font-size: 1em;
+$header-padding-top: 1.5em;
+$header-padding-bottom: 1.5em;
 $h1: ms(5);
 $h2: ms(4);
 $h3: ms(3);
 $h4: ms(2);
 $h5: ms(1);
 $h6: ms(0);
+
+
+
+// Footer
+// ==========================================================================
+$footer-color: #888;
+$footer-bg: #ccc;
+$footer-bg-front: $footer-bg;
+$footer-bg-back: linear-gradient(lighten($footer-bg, 8), $footer-bg, darken($footer-bg, 11));
+$footer-color: darken($footer-bg, 38);
+$footer-color-hover: darken($footer-color, 10);
+$footer-border-top: lighten($footer-bg, 15);
+$footer-border-bottom: darken($footer-bg, 15);
+$footer-link-color: darken($footer-bg, 38);
+$footer-link-color-hover: darken($footer-color, 25);
+$page-border-bottom: darken($footer-bg, 5);
