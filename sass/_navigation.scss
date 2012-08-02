@@ -1,0 +1,23 @@
+body > nav {
+    position: relative;
+    border: {
+        top: 1px solid $nav-border-top;
+        bottom: 1px solid $nav-border-bottom;
+    }
+    padding-top: .35em;
+    padding-bottom: .35em;
+    ul { display: none; }
+    @media only screen and (min-width: 550px) {
+        font-size: .9em;
+        ul {
+            @include horizontal-list(0);
+            float: left;
+            display: block;
+            padding-top: .15em;
+        }
+        ul li {
+          margin: 0;
+        }
+    }
+}
+

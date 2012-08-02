@@ -1,0 +1,30 @@
+@import "compass";
+
+@import "foundation/base";
+@import "settings";
+@import "foundation/globals";
+@import "foundation/typography";
+@import "foundation/grid";
+@import "foundation/ui";
+@import "foundation/buttons";
+@import "foundation/tabs";
+@import "foundation/navbar";
+@import "foundation/forms";
+@import "foundation/orbit";
+@import "foundation/reveal";
+
+@import "navigation";
+
+#slideshow { background: image-url("foundation/orbit/loading.gif") center center #f4f4f4; height: 300px; }
+#slideshow img { display: none; }
+#slideshow.orbit { background: none; }
+#slideshow.orbit img { display: block; }
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}

@@ -1,0 +1,74 @@
+# Windows #
+###########
+Thumbs.db 
+Desktop.ini
+$RECYCLE.BIN/
+
+# OSX #
+#######
+.DS_Store
+._*
+.Spotlight-V100
+.Trashes
+
+# Linux #
+#########
+*~
+.directory
+
+# SASS #
+########
+.sass-cache
+
+# Sublime Text #
+################
+/*.sublime-project
+*.sublime-workspace
+
+# Jekyll #
+##########
+_site/
+
+# node.js #
+###########
+lib-cov
+*.seed
+*.log
+*.csv
+*.dat
+*.out
+*.pid
+*.gz
+pids
+logs
+results
+npm-debug.log
+
+# Ruby #
+########
+*.gem
+*.rbc
+.bundle
+.config
+coverage
+InstalledFiles
+lib/bundler/man
+pkg
+rdoc
+spec/reports
+test/tmp
+test/version_tmp
+tmp
+.yardoc
+_yardoc
+doc/
+
+# Misc #
+########
+.gist-cache
+.pygments-cache
+source/_stash
+source/css/*.css
+source/images/icon-*.png
+vendor
+node_modules

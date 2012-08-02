@@ -1,0 +1,34 @@
+/* TEAM */
+    President: Brittney Falcon
+    Location: Western Hemisphere
+
+    Vice President: Arturo Bory
+    Site: arthurnya.tumblr.com
+    Location: Western Hemisphere
+
+    Treasurer: Kenan Yildirim
+    Site: kenany.me
+    Twitter: @kyild
+    Location: Western Hemisphere
+
+    Secretary: Stephanie Forero
+    Site: ineverwantedatumblr.tumblr.com
+    Location: Western Hemisphere
+
+/* THANKS */
+    easteregg.in:         easteregg.in
+    HTML5 Boilerplate:    html5boilerplate.com
+    jQuery:               jquery.com
+    Mobile Boilerplate:   h5bp.com/mobile
+    Modernizr:            modernizr.com
+    normalize.css:        necolas.github.com/normalize.css
+    ZURB Foundation:      foundation.zurb.com
+
+
+/* SITE */
+Last update: 2012-07-17
+Language: English
+Doctype: HTML5
+Standards: HTML5 and CSS3
+Components: Modernizr and jQuery
+IDE: Sublime Text 2

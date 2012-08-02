@@ -1,0 +1,20 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <title>{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}</title>
+    <meta name="author" content="{{ site.author }}">
+    {% capture description %}{% if page.description %}{{ page.description }}{% elsif site.description %}{{ site.description }}{% endif %}{% endcapture %}{% if description.length %}
+    <meta name="description" content="{{ description }}">{% endif %}
+    {% if page.keywords %}<meta name="keywords" content="{{ page.keywords }}">{% endif %}
+    <meta name="viewport" content="width=device-width">
+    <meta http-equiv="cleartype" content="on">
+    {% capture canonical %}{{ site.url }}{% if site.permalink contains '.html' %}{{ page.url }}{% else %}{{ page.url | remove:'index.html' }}{% endif %}{% endcapture %}
+    <link rel="canonical" href="{{ canonical }}">
+    <link href="{{ site.subscribe_rss }}" rel="alternate" title="{{site.title}}" type="application/atom+xml">
+    <link rel="stylesheet" href="{{ site.url }}/css/main.css">
+    <script src="{{ site.url }}/js/vendor/modernizr-2.6.0.min.js"></script>
+</head>

@@ -1,0 +1,20 @@
+url: http://www.plugclub.org
+title: P.L.U.G.
+author: Pace Linux User Group
+description: Pace Linux User Group
+
+date_format: "ordinal"
+
+subscribe_rss: /atom.xml
+category_feeds: false
+
+root: /
+permalink: /:year/:month/:day/:title/
+source: source
+
+exclude: ["README.md", "Rakefile"]
+pygments: false
+markdown: rdiscount
+
+rdiscount:
+  extensions: []

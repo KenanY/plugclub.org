@@ -1,0 +1,25 @@
+; editorconfig.org
+root = true
+
+; Unix-style newlines
+[*]
+end_of_line = LF
+indent_style = space
+
+[*.html]
+indent_size = 4
+
+[*.css]
+indent_size = 4
+
+[*.sass]
+indent_size = 4
+
+[*.scss]
+indent_size = 4
+
+[*.coffee]
+indent_size = 2
+
+[*.js]
+indent_size = 2
