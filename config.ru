@@ -5,8 +5,6 @@ require 'rack-livereload'
 # The project root directory
 $root = ::File.dirname(__FILE__)
 
-use Rack::LiveReload
-
 class SinatraStaticServer < Sinatra::Base
 
   get(/.+/) do
@@ -25,4 +23,5 @@ class SinatraStaticServer < Sinatra::Base
 
 end
 
+use Rack::LiveReload, :host => 'localhost', :source => :vendored
 run SinatraStaticServer
