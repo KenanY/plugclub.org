@@ -1,5 +1,7 @@
 # plugclub.org
 
+[![dependency status](https://gemnasium.com/KenanY/plugclub.org.png)](https://gemnasium.com/KenanY/plugclub.org)
+
 ## Initial setup
 
 ```bash
