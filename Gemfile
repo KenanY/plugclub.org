@@ -22,7 +22,7 @@ group :development do
 end
 
 group :assets do
-  gem 'zurb-foundation', '~> 3.0.5'
+  gem 'zurb-foundation', '~> 3.0.6'
 end
 
 gem 'sinatra', '~> 1.3.2'
