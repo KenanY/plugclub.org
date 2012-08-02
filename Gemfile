@@ -20,13 +20,19 @@ group :development do
   gem 'guard-coffeescript', '~> 1.2.0'
   gem 'guard-livereload', '~> 1.0.0'
 
-  gem "coffee-script", "~> 2.2.0"
-  gem "ffi", "~> 1.0.11"
-  gem "uglifier", "~> 1.2.5"
+  gem 'coffee-script', '~> 2.2.0'
+  gem 'ffi', '~> 1.0.11'
+  gem 'rack-livereload', '~> 0.3.6'
+  gem 'ruby_gntp', '~> 0.3.4'
+  gem 'uglifier', '~> 1.2.5'
 end
 
 group :assets do
   gem 'zurb-foundation', '~> 3.0.6'
+end
+
+platforms :ruby do
+  gem 'rb-readline'
 end
 
 gem 'sinatra', '~> 1.3.2'

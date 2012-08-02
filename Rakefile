@@ -1,13 +1,15 @@
 require "rubygems"
 require "bundler/setup"
 require "stringex"
-require 'rake/minify'
+require "rake/minify"
 
 ssh_user       = "kenany_plugclub@ssh.phx.nearlyfreespeech.net"
 ssh_port       = "22"
 document_root  = "/home/public/"
 rsync_delete   = true
 deploy_default = "rsync"
+
+copy_dot_files = []
 
 public_dir      = "_site"     # compiled site directory
 source_dir      = "source"    # source file directory
@@ -18,14 +20,73 @@ posts_dir       = "_posts"    # directory for blog files
 themes_dir      = ".themes"   # directory for blog files
 new_post_ext    = "markdown"  # default new post file extension when using the new_post task
 new_page_ext    = "markdown"  # default new page file extension when using the new_page task
-server_port     = "4000"      # port for preview server eg. localhost:4000
+server_port     = "1337"      # port for preview server eg. localhost:4000
 
 desc "Generate jekyll site"
 task :generate do
-  raise "### You haven't set anything up yet. First run `rake install` to set up an Octopress theme." unless File.directory?(source_dir)
   puts "## Generating Site with Jekyll"
   system "compass compile --css-dir #{source_dir}/css"
   system "jekyll"
+end
+
+# usage rake generate_only[my-post]
+desc "Generate only the specified post (much faster)"
+task :generate_only, :filename do |t, args|
+  if args.filename
+    filename = args.filename
+  else
+    filename = get_stdin("Enter a post file name: ")
+  end
+  puts "## Stashing other posts"
+  Rake::Task["isolate"].invoke(filename)
+  Rake::Task["generate"].execute
+  puts "## Restoring stashed posts"
+  Rake::Task["integrate"].execute
+end
+
+desc "Watch the site and regenerate when it changes"
+task :watch do
+  puts "Starting to watch source with Jekyll and Compass."
+  system "compass compile --css-dir #{source_dir}/css"
+  jekyllPid = Process.spawn("jekyll --auto")
+  compassPid = Process.spawn("compass watch")
+  trap("INT") {
+    [jekyllPid, compassPid].each { |pid| Process.kill(9, pid) rescue Errno::ESRCH }
+    exit 0
+  }
+  [jekyllPid, compassPid].each { |pid| Process.wait(pid) }
+end
+
+desc "preview the site in a web browser"
+task :preview do
+  puts "Starting to watch source with Jekyll and Compass. Starting Rack on port #{server_port}"
+  system "compass compile --css-dir #{source_dir}/css"
+  jekyllPid = Process.spawn("jekyll --auto")
+  compassPid = Process.spawn("compass watch")
+  guardPid = Process.spawn("guard")
+  rackupPid = Process.spawn("rackup --port #{server_port}")
+
+  trap("INT") {
+    [jekyllPid, compassPid, guardPid, rackupPid].each { |pid| Process.kill(9, pid) rescue Errno::ESRCH }
+    exit 0
+  }
+
+  [jekyllPid, compassPid, guardPid, rackupPid].each { |pid| Process.wait(pid) }
+end
+
+# usage rake isolate[my-post]
+desc "Move all other posts than the one currently being worked on to a temporary stash location (stash) so regenerating the site happens much quicker."
+task :isolate, :filename do |t, args|
+  if args.filename
+    filename = args.filename
+  else
+    filename = get_stdin("Enter a post file name: ")
+  end
+  stash_dir = "#{source_dir}/#{stash_dir}"
+  FileUtils.mkdir(stash_dir) unless File.exist?(stash_dir)
+  Dir.glob("#{source_dir}/#{posts_dir}/*.*") do |post|
+    FileUtils.mv post, stash_dir unless post.include?(filename)
+  end
 end
 
 desc "Move all stashed posts back into the posts directory, ready for site generation."
@@ -43,21 +104,17 @@ end
 
 desc "Default deploy task"
 task :deploy do
-  # Check if preview posts exist, which should not be published
-  if File.exists?(".preview-mode")
-    puts "\n## Found posts in preview mode, regenerating files ..."
-    File.delete(".preview-mode")
-    Rake::Task[:generate].execute
-    Rake::Task[:minify].execute
-  end
-
   Rake::Task[:copydot].invoke(source_dir, public_dir)
   Rake::Task["#{deploy_default}"].execute
 end
 
+desc "Generate website and deploy"
+task :gen_deploy => [:integrate, :generate, :deploy] do
+end
+
 desc "copy dot files for deployment"
 task :copydot, :source, :dest do |t, args|
-  files = [".htaccess", ".nojekyll"]
+  files = [".htaccess"] | copy_dot_files
   Dir["#{args.source}/.*"].each do |file|
     if !File.directory?(file) && files.include?(File.basename(file))
       cp(file, file.gsub(/#{args.source}/, "#{args.dest}"));
@@ -109,9 +166,4 @@ desc "list tasks"
 task :list do
   puts "Tasks: #{(Rake::Task.tasks - [Rake::Task[:list]]).join(', ')}"
   puts "(type rake -T for more detail)\n\n"
-end
-
-if $0 == __FILE__
-  app = Rake.application
-  app[:default].invoke
 end
