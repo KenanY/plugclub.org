@@ -23,3 +23,15 @@ indent_size = 2
 
 [*.js]
 indent_size = 2
+
+[*.rb]
+indent_size = 2
+
+[Gemfile]
+indent_size = 2
+
+[Guardfile]
+indent_size = 2
+
+[Rakefile]
+indent_size = 2
