@@ -9,7 +9,7 @@ document_root  = "/home/public/"
 rsync_delete   = true
 deploy_default = "rsync"
 
-public_dir      = "_site"    # compiled site directory
+public_dir      = "_site"     # compiled site directory
 source_dir      = "source"    # source file directory
 blog_index_dir  = 'source'    # directory for your blog's index page (if you put your index in source/blog/index.html, set this to 'source/blog')
 deploy_dir      = "_deploy"   # deploy directory (for GitHub pages deployment)
@@ -65,8 +65,6 @@ task :copydot, :source, :dest do |t, args|
   end
 end
 
-# rsync --chmod=u+rwX,g+rwX,o+rX,o-w -avze 'ssh -p 22' --delete _site/ kenany_kenany@ssh.phx.nearlyfreespeech.net:/home/public
-# chmod -R 775 .
 desc "Deploy website via rsync"
 task :rsync do
   exclude = ""
