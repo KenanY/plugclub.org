@@ -19,6 +19,10 @@ group :development do
   gem 'guard-bundler', '~> 1.0.0'
   gem 'guard-coffeescript', '~> 1.2.0'
   gem 'guard-livereload', '~> 1.0.0'
+
+  gem "coffee-script", "~> 2.2.0"
+  gem "ffi", "~> 1.0.11"
+  gem "uglifier", "~> 1.2.5"
 end
 
 group :assets do
