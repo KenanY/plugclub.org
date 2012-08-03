@@ -8,7 +8,7 @@ group :development do
   gem 'pygments.rb', '~> 0.2.12'
   gem 'RedCloth', '~> 4.2.9'
   gem 'haml', '~> 3.1.6'
-  gem 'compass', '~> 0.12.1'
+  gem 'compass', '~> 0.12.2'
   gem 'rubypants', '~> 0.2.0'
   gem 'rb-fsevent', '~> 0.9'
   gem 'stringex', '~> 1.4.0'
@@ -21,9 +21,10 @@ group :development do
   gem 'guard-livereload', '~> 1.0.0'
 
   gem 'coffee-script', '~> 2.2.0'
-  gem 'ffi', '~> 1.0.11'
+  gem 'ffi'
   gem 'rack-livereload', '~> 0.3.6'
   gem 'ruby_gntp', '~> 0.3.4'
+  gem 'sass', '~> 3.2.0.alpha.244'
   gem 'uglifier', '~> 1.2.5'
 end
 
