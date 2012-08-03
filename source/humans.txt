@@ -24,7 +24,7 @@
     ZURB Foundation:      foundation.zurb.com
 
 /* SITE */
-Last update: 2012-07-17
+Last update: 2012-08-02
 Language: English
 Doctype: HTML5
 Standards: HTML5 and CSS3
