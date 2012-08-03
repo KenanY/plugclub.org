@@ -16,6 +16,8 @@
     {% capture canonical %}{{ site.url }}{% if site.permalink contains '.html' %}{{ page.url }}{% else %}{{ page.url | remove:'index.html' }}{% endif %}{% endcapture %}
     <link rel="canonical" href="{{ canonical }}">
     <link href="{{ site.subscribe_rss }}" rel="alternate" title="{{site.title}}" type="application/atom+xml">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Serif:400,700,700italic,400italic">
     <link rel="stylesheet" href="/css/main.css">
     <script src="/js/vendor/modernizr-2.6.0.min.js"></script>
 </head>

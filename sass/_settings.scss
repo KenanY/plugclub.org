@@ -90,19 +90,20 @@ $nav-border-right: $nav-border;
 // Modular Scale
 // ==========================================================================
 $ratio: $golden;
-$base-size: 14px 44px;
+$base-size: 16px 50px;
 
 
 
 // Typography
 // ==========================================================================
 $blockquote: $type-border;
-$sans: "PT Sans", "Helvetica Neue", Arial, sans-serif;
+$sans: "Open Sans Bold", "Helvetica Neue", Arial, sans-serif;
 $serif: "PT Serif", Georgia, Times, "Times New Roman", serif;
 $mono: Menlo, Monaco, "Andale Mono", "lucida console", "Courier New", monospace;
+$bodyFontFamily: $serif;
 $heading-font-family: "PT Serif", "Georgia", "Helvetica Neue", Arial, sans-serif;
-$header-title-font-family: $heading-font-family;
-$header-subtitle-font-family: $heading-font-family;
+$header-title-font-family: $sans;
+$header-subtitle-font-family: $sans;
 $header-font-size: 1em;
 $header-padding-top: 1.5em;
 $header-padding-bottom: 1.5em;

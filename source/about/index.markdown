@@ -1,0 +1,16 @@
+---
+layout: page
+title: About Us
+sidebar: false
+comments: false
+footer: false
+---
+
+The Pace Linux User Group (otherwise known as P.L.U.G.) is a place of joy and Linux. All are welcome to join in the experiment, watching as we approach the long-term goal of the club: to create more Linux user groups in different high schools all over the world, and with it, new Linux users!
+
+## Officers
+
+  - **Brittney Falcon**, potato. Also President.
+  - **Arturo Bory**, born from the kernel of Unix and coded in Pascal, has grown from his small beginnings on the streets of Zimbabwe to reach the level of vice-president of the Pace Linux User Group. He (or it) has been credited with the idea of starting a Linux user group, though as he/it is the one writing this, imagine he/it saying this humbly, or he/it might seem like a dick, which he/it may or may not be. She (is it a typo?) hopes to start more Linux user groups in different high schools to show the benefits of Linux to more and more people, with the eventual goal of having Linux be the new Windows and FreeBSD be the old Linux.
+  - **Alexis Almonte**, the illegitimate child of Paul Simon and Art Garfunkel, has amazing potential as a guitarist, and as an even greater achievement runs Linux on his computer. His witty sense of humor and his gigantic pair of glasses have landed him a position as secretary of the Pace Linux User Group. And when this bio says "landed," it means forced, seeing as he needs some sort of extracurricular activity to get into a good college. He's welcome.
+  - **Kenan Yildirim** drinks coffee and listens to dubstep. He's the club treasurer, but he's about to lose his position over a Python script he wrote that does all his work for him. When he's not indulging in CoffeeScript or styling websites with SASS, he's gaming on one of his two gaming rigs.

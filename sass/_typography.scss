@@ -13,15 +13,20 @@
 .mono { font-family: $mono; }
 
 body > header h1 {
-    font-size: $h1;
+    font-size: ms(9);
     @extend .heading;
     font-family: $header-title-font-family;
-    font-weight: normal;
+    font-weight: bold;
     line-height: 1.2em;
-    margin-bottom: 0.6667em;
+    margin-bottom: ms(0);
+    margin-top: ms(0);
+    text-transform: uppercase;
 }
 body > header h2 {
     font-family: $header-subtitle-font-family;
+}
+body > header a {
+    @include link-colors($txtColor, $txtColor, $visited: $txtColor);
 }
 
 body {

@@ -11,8 +11,7 @@
     Twitter: @kyild
     Location: Western Hemisphere
 
-    Secretary: Stephanie Forero
-    Site: ineverwantedatumblr.tumblr.com
+    Secretary: Alexis Almonte
     Location: Western Hemisphere
 
 /* THANKS */
@@ -23,7 +22,6 @@
     Modernizr:            modernizr.com
     normalize.css:        necolas.github.com/normalize.css
     ZURB Foundation:      foundation.zurb.com
-
 
 /* SITE */
 Last update: 2012-07-17
