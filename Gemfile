@@ -15,7 +15,7 @@ group :development do
   gem 'liquid', '~> 2.3.0'
   gem 'rake-minify'
 
-  gem 'guard', '~> 1.2.3'
+  gem 'guard', '~> 1.3.0'
   gem 'guard-bundler', '~> 1.0.0'
   gem 'guard-coffeescript', '~> 1.2.0'
   gem 'guard-livereload', '~> 1.0.0'
