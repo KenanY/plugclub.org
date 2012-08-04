@@ -7,15 +7,7 @@
 @import "navigation";
 @import "scrollbar";
 @import "cursor";
-
-::-moz-selection {
-    background: #b3d4fc;
-    text-shadow: none;
-}
-::selection {
-    background: #b3d4fc;
-    text-shadow: none;
-}
+@import "misc";
 
 // For debugging
 @import "holmes";

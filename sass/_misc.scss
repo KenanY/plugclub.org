@@ -1,0 +1,62 @@
+// ==========================================================================
+// Misc
+// ==========================================================================
+
+/* Officer panels
+   ========================================================================== */
+.officers {
+    .panel {
+        border: 1px solid #7DB4B5;
+        border-top: 1px solid #fbfbfb;
+        color: #363636;
+        background: #E0EFF1;
+        @include box-shadow(rgba(255, 255, 255, 0.5) 0 1px 0 inset);
+        header {
+            padding: 10px;
+        }
+        .avatar {
+            float: left;
+            height: 150px;
+            width: 150px;
+            margin: 9px;
+            border: 1px solid #ccc;
+        }
+        h1 {
+            font-size: ms(2);
+            color: #680148;
+            font-weight: bold;
+            margin: 5px 0 .5em 0;
+            line-height: 1em;
+            text-transform: uppercase;
+        }
+        h2 {
+            color: #878787;
+            font-size: ms(1);
+            font-weight: normal;
+            line-height: 1;
+        }
+        p {
+            padding: 10px;
+            border-top: 1px solid #d8d8d8;
+            font-size: ms(0);
+            line-height: 16px;
+            color: #363636;
+            clear: both;
+            overflow-y: auto;
+            overflow-x: hidden;
+        }
+    }
+}
+
+
+
+/* Highlighting
+   ========================================================================== */
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
