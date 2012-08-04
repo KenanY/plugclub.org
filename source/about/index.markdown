@@ -12,7 +12,7 @@ The Pace Linux User Group (otherwise known as P.L.U.G.) is a place of joy and Li
     <h2>Officers</h2>
     <div class="panel radius brittney-falcon">
         <header>
-            <img class="avatar" src="img/officers/brittney.png">
+            <img class="avatar" src="img/officers/brittney.png" width="150" height="150">
             <h1>Brittney Falcon</h1>
             <h2>President</h2>
         </header>
@@ -20,7 +20,7 @@ The Pace Linux User Group (otherwise known as P.L.U.G.) is a place of joy and Li
     </div>
     <div class="panel radius arthurnova">
         <header>
-            <img class="avatar" src="img/officers/arthur.png">
+            <img class="avatar" src="img/officers/arthur.png" width="150" height="150">
             <h1>Arturo Bory</h1>
             <h2>Vice-president</h2>
         </header>
@@ -38,7 +38,7 @@ The Pace Linux User Group (otherwise known as P.L.U.G.) is a place of joy and Li
             <h1>Kenan Yildirim</h1>
             <h2>Treasurer</h2>
         </header>
-        <p>Drinks coffee and listens to dubstep. He's the club treasurer, but he's about to lose his position over a Python script he wrote that does all his work for him.</p>
+        <p>Drinks coffee and listens to dubstep. He's the club treasurer, but he's about to lose his position over a Python script he wrote that does all his work for him. He's the one to talk to if you have an issue with this site; he's the one who programmed it. Perhaps that makes him the club webmaster as well?</p>
     </div>
     <div class="panel radius jp">
         <header>
