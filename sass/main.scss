@@ -7,6 +7,8 @@
 // Imports
 // ==========================================================================
 @import "compass";
+@include global-reset;
+@include reset-html5;
 
 @import "settings";
 @import "foundation";
