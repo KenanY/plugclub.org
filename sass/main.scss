@@ -11,9 +11,12 @@
 @import "settings";
 @import "foundation";
 
+@import "utilities";
 @import "layout";
 @import "typography";
+
 @import "navigation";
+@import "blog";
 @import "footer";
 
 // For debugging
@@ -147,4 +150,15 @@
 ::selection {
     background: #b3d4fc;
     text-shadow: none;
+}
+
+
+
+// Chrome Frame prompt
+// ==========================================================================
+.chromeframe {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
 }

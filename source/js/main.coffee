@@ -1,49 +1,9 @@
-plug = (->
-  addMobileNav: ->
-    mainNav = $("ul.main-navigation, ul[role=main-navigation]").before("<fieldset class=\"mobile-nav\">")
-    mobileNav = $("fieldset.mobile-nav").append("<select>")
-    mobileNav.find("select").append "<option value=\"\">Navigate&hellip;</option>"
-    addOption = ->
-      mobileNav.find("select").append "<option value=\"" + @href + "\">&raquo; " + $(this).text() + "</option>"
-
-    mainNav.find("a").each addOption
-    $("ul.subscription a").each addOption
-    mobileNav.find("select").bind "change", (event) ->
-      window.location.href = event.target.value  if event.target.value
-
-
-  testFeature: (features) ->
-    getTestClasses = (tests) ->
-      classes = ""
-      if typeof (tests.join) is "function"
-        i = 0
-
-        while i < features.length
-          classes += getClass(features[i]) + " "
-          i++
-      else
-        classes = getClass(tests)
-      classes
-
-    getClass = (test) ->
-      ((if Modernizr.testAllProps(test) then test else "no-" + test)).toLowerCase()
-
-    $("html").addClass getTestClasses(features)
-
-)()
-
-
-
 Modernizr.load
   load: '//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.js'
   complete: =>
     Modernizr.load 'js/vendor/jquery-1.7.2.min.js' unless window.jQuery
 ,
   load: 'js/plugins.js'
-  complete: =>
-    $(document).ready ->
-      plug.testFeature ["maskImage", "transform"]
-      plug.addMobileNav()
 
 
 
