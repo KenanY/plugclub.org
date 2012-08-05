@@ -52,6 +52,14 @@ $ bundle install
 
 ## Changelog
 
+### 1.0.1 / 2012-08-05 / [browse](/KenanY/plugclub.org/tree/1.0.1) / [zip](/KenanY/plugclub.org/zipball/1.0.1) / [tar](/KenanY/plugclub.org/tarball/1.0.1)
+
+   * Add favicon to head
+   * Cachebust `main.css`
+   * Stop navigation from disappearing on small screens (see #4)
+   * Remove duplicate header div
+   * Add blog styles
+
 ### 1.0.0 / 2012-08-04 / [browse](/KenanY/plugclub.org/tree/1.0.0) / [zip](/KenanY/plugclub.org/zipball/1.0.0) / [tar](/KenanY/plugclub.org/tarball/1.0.0)
 
    * Beginning of using version numbering
