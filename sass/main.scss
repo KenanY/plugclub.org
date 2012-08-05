@@ -1,13 +1,150 @@
+// ==========================================================================
+// main.scss => main.css
+// ==========================================================================
+
+
+
+// Imports
+// ==========================================================================
 @import "compass";
 
 @import "settings";
 @import "foundation";
 
+@import "layout";
 @import "typography";
 @import "navigation";
-@import "scrollbar";
-@import "cursor";
-@import "misc";
+@import "footer";
 
 // For debugging
-@import "holmes";
+// @import "holmes";
+
+
+
+// Scrollbar
+// ==========================================================================
+::-webkit-scrollbar {
+    margin-right: 5px;
+    background-color: #eee;
+    width: 12px;
+}
+::-webkit-scrollbar-track {
+    @include box-shadow(#ccc 0 0 2px);
+}
+::-webkit-scrollbar-thumb {
+    border: 1px #eee solid;
+    @include border-radius(12px);
+    background: #777;
+    @include box-shadow(#555 0 0 8px inset);
+    @include transition-property(all);
+    @include transition-duration(.3s);
+    @include transition-timing-function(ease-out);
+}
+::-webkit-scrollbar-thumb:window-inactive {
+    background: #bbb;
+    @include box-shadow(#999 0 0 8px inset);
+}
+::-webkit-scrollbar-thumb:hover { background: #999 }
+
+
+
+// Cursor
+// ==========================================================================
+.auto { cursor: auto }
+.default { cursor: default }
+.hand { cursor: hand }
+.pointer { cursor: pointer }
+.text { cursor: text }
+.help { cursor: help }
+.crosshair { cursor: crosshair }
+.move { cursor: move }
+.w-resize { cursor: w-resize }
+.e-resize { cursor: e-resize }
+.n-resize { cursor: n-resize }
+.s-resize { cursor: s-resize }
+.nw-resize { cursor: nw-resize }
+.ne-resize { cursor: ne-resize }
+.sw-resize { cursor: sw-resize }
+.se-resize { cursor: se-resize }
+.ns-resize { cursor: ns-resize }
+.ew-resize { cursor: ew-resize }
+.nwse-resize { cursor: nwse-resize }
+.nesw-resize { cursor: nesw-resize }
+.col-resize { cursor: col-resize }
+.row-resize { cursor: row-resize }
+.all-scroll { cursor: all-scroll }
+.vertical-text { cursor: vertical-text }
+.context-menu { cursor: context-menu }
+.no-drop { cursor: no-drop }
+.not-allowed { cursor: not-allowed }
+.progress { cursor: progress }
+.wait { cursor: wait }
+.alias { cursor: alias }
+.cell { cursor: cell }
+.copy { cursor: copy }
+.none { cursor: none }
+.zommin { cursor: -webkit-zoom-in }
+.zoomout { cursor: -webkit-zoom-out }
+.grab { cursor: -webkit-grab }
+.grabing { cursor: -webkit-grabbing }
+
+
+
+// Officer panels
+// ==========================================================================
+.officers {
+    .panel {
+        border: 1px solid #fbfbfb;
+        color: #363636;
+        background: #E0EFF1;
+        @include box-shadow(rgba(255, 255, 255, 0.5) 0 1px 0 inset);
+        header {
+            padding: 10px;
+        }
+        .avatar {
+            float: left;
+            height: 150px;
+            width: 150px;
+            margin: 9px;
+            border: 1px solid #ccc;
+            @include border-radius(3px);
+        }
+        h1 {
+            font-size: ms(2);
+            color: #680148;
+            font-weight: bold;
+            margin: 5px 0 .5em 0;
+            line-height: 1em;
+            text-transform: uppercase;
+        }
+        h2 {
+            color: #878787;
+            font-size: ms(1);
+            font-weight: normal;
+            line-height: 1;
+        }
+        p {
+            padding: 10px;
+            border-top: 1px solid #d8d8d8;
+            font-size: ms(0);
+            line-height: ms(1);
+            color: #363636;
+            clear: both;
+            overflow-y: auto;
+            overflow-x: hidden;
+        }
+    }
+}
+
+
+
+// Highlighting
+// ==========================================================================
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
