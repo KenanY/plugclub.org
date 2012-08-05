@@ -1,6 +1,6 @@
 # Windows #
 ###########
-Thumbs.db 
+Thumbs.db
 Desktop.ini
 $RECYCLE.BIN/
 
@@ -70,5 +70,3 @@ doc/
 source/_stash
 source/css/*.css
 source/images/icon-*.png
-vendor
-node_modules
