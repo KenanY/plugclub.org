@@ -24,9 +24,10 @@
     ZURB Foundation:      foundation.zurb.com
 
 /* SITE */
-Last update: 2012-08-02
-Language: English
-Doctype: HTML5
-Standards: HTML5 and CSS3
-Components: Modernizr and jQuery
-IDE: Sublime Text 2
+    Version: 1.0.0
+    Last update: 2012-08-04
+    Language: English
+    Doctype: HTML5
+    Standards: HTML5 and CSS3
+    Components: Modernizr and jQuery
+    IDE: Sublime Text 2

@@ -50,6 +50,15 @@ $ gem install bundler
 $ bundle install
 ```
 
+***
+
+## Changelog
+
+### 1.0.0 / 2012-08-04 / [browse](/KenanY/plugclub.org/tree/1.0.0) / [zip](/KenanY/plugclub.org/zipball/1.0.0) / [tar](/KenanY/plugclub.org/tarball/1.0.0)
+
+   * Beginning of using version numbering
+
+
    [guard]: https://github.com/guard/guard
    [Jekyll]: http://jekyllrb.com/
    [RVM]: https://rvm.io/
