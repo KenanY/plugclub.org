@@ -11,35 +11,32 @@ body > nav {
     }
     padding-top: .35em;
     padding-bottom: .35em;
-    ul { display: none; }
-    @media only screen and (min-width: 550px) {
-        font-size: .9em;
-        ul {
-            // @include horizontal-list(0);
-            float: left;
-            display: block;
-            padding-top: .15em;
-        }
-        ul li {
-            margin: 0;
-        }
+    font-size: ms(1);
+    ul {
+        @include horizontal-list(0);
+        float: left;
+        display: block;
+        padding-top: .15em;
+    }
+    ul li {
+        margin: 0;
+    }
+    a {
+        @include link-colors($nav-color, $nav-color-hover, $visited: $nav-color);
+        font-family: $sans;
+        text-shadow: lighten($nav-bg, 12) 0 1px;
+        float: left;
+        text-decoration: none;
+        font-size: 1.1em;
+        padding: .1em 0;
+        line-height: 1.5em;
+    }
+    li + li {
+        border-left: 1px solid $nav-border-left;
+        margin-left: .8em;
         a {
-            @include link-colors($nav-color, $nav-color-hover, $visited: $nav-color);
-            font-family: $sans;
-            text-shadow: lighten($nav-bg, 12) 0 1px;
-            float: left;
-            text-decoration: none;
-            font-size: 1.1em;
-            padding: .1em 0;
-            line-height: 1.5em;
-        }
-        li + li {
-            border-left: 1px solid $nav-border-left;
-            margin-left: .8em;
-            a {
-                padding-left: .8em;
-                border-left: 1px solid $nav-border-right;
-            }
+            padding-left: .8em;
+            border-left: 1px solid $nav-border-right;
         }
     }
 }
