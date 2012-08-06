@@ -52,6 +52,13 @@ $ bundle install
 
 ## Changelog
 
+### 1.0.2 / 2012-08-05 / [browse](/KenanY/plugclub.org/tree/1.0.2) / [zip](/KenanY/plugclub.org/zipball/1.0.2) / [tar](/KenanY/plugclub.org/tarball/1.0.2)
+
+   * Fix canonical link and description capturing
+   * Fix officer avatars pointing to incorrect directory
+   * Put `Modernizr.load` snippet at bottom of page instead of within a JavaScript file
+   * Put treasurer above secretary on about page
+
 ### 1.0.1 / 2012-08-05 / [browse](/KenanY/plugclub.org/tree/1.0.1) / [zip](/KenanY/plugclub.org/zipball/1.0.1) / [tar](/KenanY/plugclub.org/tarball/1.0.1)
 
    * Add favicon to head
