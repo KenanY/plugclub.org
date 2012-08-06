@@ -1,2 +1,13 @@
-<script src="/js/main.js"></script>
+<script>
+    Modernizr.load({
+        load: '//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.js',
+        complete: function() {
+            if (!window.jQuery) {
+                return Modernizr.load('js/vendor/jquery-1.7.2.min.js');
+            }
+        }
+    }, {
+        load: ['js/plugins.js', 'js/main.js']
+    });
+</script>
 {% include google_analytics.html %}
