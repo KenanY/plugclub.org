@@ -52,6 +52,12 @@ $ bundle install
 
 ## Changelog
 
+### 1.0.3 / 2012-08-12 / [browse](/KenanY/plugclub.org/tree/1.0.3) / [zip](/KenanY/plugclub.org/zipball/1.0.3) / [tar](/KenanY/plugclub.org/tarball/1.0.3)
+
+   * Update jQuery to 1.8.0
+   * Include local copy of jQuery if Google's CDN is offline
+   * Two-space indent `plugins.js` and `Modernizr.load` snippet
+
 ### 1.0.2 / 2012-08-05 / [browse](/KenanY/plugclub.org/tree/1.0.2) / [zip](/KenanY/plugclub.org/zipball/1.0.2) / [tar](/KenanY/plugclub.org/tarball/1.0.2)
 
    * Fix canonical link and description capturing
