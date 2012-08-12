@@ -24,7 +24,7 @@ group :development do
   gem 'ffi'
   gem 'rack-livereload', '~> 0.3.6'
   gem 'ruby_gntp', '~> 0.3.4'
-  gem 'sass', '~> 3.2.0.alpha.244'
+  gem 'sass', '3.2.0.alpha.244'
   gem 'uglifier', '~> 1.2.5'
 end
 

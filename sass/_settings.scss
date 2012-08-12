@@ -1,7 +1,7 @@
 // ==========================================================================
 // Settings
 // ==========================================================================
-@import "foundation/functions/modular-scale";
+@import "foundation/common/ratios";
 
 
 
@@ -92,7 +92,8 @@ $nav-border-right: $nav-border;
 // Modular Scale
 // ==========================================================================
 $ratio: $golden;
-$base-size: 16px 50px;
+$baseFontSize: 16px;
+$importantModNum: 50px;
 
 
 
