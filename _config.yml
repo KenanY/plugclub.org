@@ -3,6 +3,7 @@ title: P.L.U.G.
 author: Pace Linux User Group
 description: Pace Linux User Group
 
+# http://www.ruby-doc.org/core-1.9.2/Time.html#method-i-strftime
 date_format: "ordinal"
 
 subscribe_rss: /atom.xml
@@ -11,6 +12,8 @@ category_feeds: false
 root: /
 permalink: /:year/:month/:day/:title/
 source: source
+destination: _site
+plugins: _plugins
 
 exclude: ["README.md", "Rakefile"]
 pygments: false
@@ -18,3 +21,15 @@ markdown: rdiscount
 
 rdiscount:
   extensions: []
+
+excerpt_link: "Read on &rarr;"
+excerpt_in_feed: false
+permalink_label: "Permalink"
+permalink_label_feed: "&#9875; Permalink"
+linklog_marker: "&rarr;"
+linklog_marker_position: after
+linklog_marker_position_feed: after
+
+titlecase: true
+
+google_analytics_tracking_id:
