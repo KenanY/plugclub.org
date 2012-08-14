@@ -24,12 +24,12 @@ group :development do
   gem 'ffi'
   gem 'rack-livereload', '~> 0.3.6'
   gem 'ruby_gntp', '~> 0.3.4'
-  gem 'sass', '3.2.0.alpha.244'
+  gem 'sass', '~> 3.2.0'
   gem 'uglifier', '~> 1.2.5'
 end
 
 group :assets do
-  gem 'zurb-foundation', '~> 3.0.6'
+  gem 'zurb-foundation', '~> 3.0.8'
 end
 
 platforms :ruby do
