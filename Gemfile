@@ -1,6 +1,8 @@
-source "http://rubygems.org"
+source 'http://rubygems.org'
 
 group :development do
+
+  # These gems are kept the same as Octopress has them
   gem 'rake', '~> 0.9.2'
   gem 'rack', '~> 1.4.1'
   gem 'jekyll', '~> 0.11.2'
@@ -15,11 +17,13 @@ group :development do
   gem 'liquid', '~> 2.3.0'
   gem 'rake-minify'
 
+  # Guard and friends
   gem 'guard', '~> 1.3.0'
   gem 'guard-bundler', '~> 1.0.0'
   gem 'guard-coffeescript', '~> 1.2.0'
   gem 'guard-livereload', '~> 1.0.0'
 
+  # Other gems
   gem 'coffee-script', '~> 2.2.0'
   gem 'ffi'
   gem 'rack-livereload', '~> 0.3.6'
