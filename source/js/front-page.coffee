@@ -3,28 +3,25 @@
 
 
 
-get_random_int = (min, max) ->
+getRandomInt = (min, max) ->
   Math.floor(Math.random() * (max - min + 1)) + min
 
-throttle = (fn, delay) ->
-  timer = null
-  () ->
-    context = this
-    args = arguments
-    clearTimeout(timer);
-    timer = setTimeout(() ->
-      fn.apply(context, args);
-    , delay);
+cobbleLoop = ->
+  if db
+    false
+  else
+    db = true
+  incrementBy = getRandomInt 1, 128
+  curNum = $("#cobble").html()
+  curNum = curNum.replace /\,/g, ""
+  curNum = parseInt(curNum, 10)
+  newNum = curNum + incrementBy
+  i = 0
+  while i < incrementBy
+    $("#cobble").html(addCommas(curNum + 1))
+    i++
+  db = false
 
-cobble_loop = ->
-  throttle((event) ->
-    toAdd = get_random_int(1, 64)
-    while toAdd-= 1
-      val += 1
-      $('li#cobble').html(addCommas(val) + ' cobblestone mined in Minecraft')
-      cobble_loop()
-  , 1000)
+db = false
 
-val = 64
-
-cobble_loop()
+setInterval(cobbleLoop, 100)
