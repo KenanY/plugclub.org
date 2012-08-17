@@ -2,11 +2,23 @@
 ---
 
 
-if Modernizr.touch
-  $(window).load ->
-    setTimeout ->
-      window.scrollTo 0, 1
-    , 0
+
+$(document).ready(->
+  $(document).foundationAlerts()
+  $(document).foundationButtons()
+  $(document).foundationAccordion()
+  $(document).foundationNavigation()
+  $(document).foundationCustomForms()
+  $(document).foundationMediaQueryViewer()
+  $(document).foundationTabs {callback: $.foundation.customForms.appendCustomMarkup}
+  $(document).tooltips()
+  $('input, textarea').placeholder()
+  if Modernizr.touch
+    $(window).load ->
+      setTimeout ->
+        window.scrollTo 0, 1
+      , 0
+  )
 
 
 
