@@ -1,8 +1,3 @@
----
----
-
-
-
 $(document).ready(->
   $(document).foundationAlerts()
   $(document).foundationButtons()

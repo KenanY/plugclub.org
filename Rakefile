@@ -24,7 +24,19 @@ desc "Generate jekyll site"
 task :generate do
   puts "## Generating Site with Jekyll"
   system "compass compile --css-dir #{source_dir}/css"
+  Rake::Task['minify_and_combine'].execute
   system "jekyll"
+end
+
+Rake::Minify.new(:minify_and_combine) do
+  puts "BEGIN Minifying plug.min.js"
+  dir("#{source_dir}/js") do
+    group("#{source_dir}/js/plug.min.js") do
+      add("plugins.js")
+      add("main.coffee")
+    end
+  end
+  puts "END Minifying plug.min.js"
 end
 
 # usage rake generate_only[my-post]

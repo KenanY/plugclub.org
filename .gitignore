@@ -69,4 +69,5 @@ doc/
 .pygments-cache
 source/_stash
 source/css/*.css
-source/images/icon-*.png
+source/img/icon-*.png
+source/js/plug.min.js
