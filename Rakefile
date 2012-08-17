@@ -48,11 +48,12 @@ task :watch do
   system "bundle exec compass compile --css-dir #{source_dir}/css"
   jekyllPid = Process.spawn("bundle exec jekyll --auto")
   compassPid = Process.spawn("bundle exec compass watch")
+  guardPid = Process.spawn("bundle exec guard")
   trap("INT") {
-    [jekyllPid, compassPid].each { |pid| Process.kill(9, pid) rescue Errno::ESRCH }
+    [jekyllPid, compassPid, guardPid].each { |pid| Process.kill(9, pid) rescue Errno::ESRCH }
     exit 0
   }
-  [jekyllPid, compassPid].each { |pid| Process.wait(pid) }
+  [jekyllPid, compassPid, guardPid].each { |pid| Process.wait(pid) }
 end
 
 desc "preview the site in a web browser"
