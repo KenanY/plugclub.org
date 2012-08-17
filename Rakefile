@@ -2,6 +2,7 @@ require "rubygems"
 require "bundler/setup"
 require "stringex"
 require "rake/minify"
+require "guard"
 
 ssh_user       = "kenany_plugclub@ssh.phx.nearlyfreespeech.net"
 ssh_port       = "22"

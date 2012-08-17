@@ -20,6 +20,7 @@ group :development do
   # Guard and friends
   gem 'guard', '~> 1.3.0'
   gem 'guard-bundler', '~> 1.0.0'
+  gem 'guard-compass', '~> 0.0.6'
   gem 'guard-coffeescript', '~> 1.2.0'
   gem 'guard-livereload', '~> 1.0.0'
 
