@@ -23,7 +23,7 @@ server_port     = "1337"      # port for preview server eg. localhost:4000
 desc "Generate jekyll site"
 task :generate do
   puts "## Generating Site with Jekyll"
-  system "bundle exec compass compile --css-dir #{source_dir}/css"
+  system "compass compile --css-dir #{source_dir}/css"
   system "jekyll"
 end
 
@@ -45,10 +45,10 @@ end
 desc "Watch the site and regenerate when it changes"
 task :watch do
   puts "Starting to watch source with Jekyll and Compass."
-  system "bundle exec compass compile --css-dir #{source_dir}/css"
-  jekyllPid = Process.spawn("bundle exec jekyll --auto")
-  compassPid = Process.spawn("bundle exec compass watch")
-  guardPid = Process.spawn("bundle exec guard")
+  system "compass compile --css-dir #{source_dir}/css"
+  jekyllPid = Process.spawn("jekyll --auto")
+  compassPid = Process.spawn("compass watch")
+  guardPid = Process.spawn("guard")
   trap("INT") {
     [jekyllPid, compassPid, guardPid].each { |pid| Process.kill(9, pid) rescue Errno::ESRCH }
     exit 0
@@ -59,11 +59,11 @@ end
 desc "preview the site in a web browser"
 task :preview do
   puts "Starting to watch source with Jekyll and Compass. Starting Rack on port #{server_port}"
-  system "bundle exec compass compile --css-dir #{source_dir}/css"
-  jekyllPid = Process.spawn("bundle exec jekyll --auto")
-  compassPid = Process.spawn("bundle exec compass watch")
-  guardPid = Process.spawn("bundle exec guard")
-  rackupPid = Process.spawn("bundle exec rackup --port #{server_port}")
+  system "compass compile --css-dir #{source_dir}/css"
+  jekyllPid = Process.spawn("jekyll --auto")
+  compassPid = Process.spawn("compass watch")
+  guardPid = Process.spawn("guard")
+  rackupPid = Process.spawn("rackup --port #{server_port}")
 
   trap("INT") {
     [jekyllPid, compassPid, guardPid, rackupPid].each { |pid| Process.kill(9, pid) rescue Errno::ESRCH }
@@ -129,14 +129,6 @@ task :rsync do
   end
   puts "\n## Deploying website via Rsync"
   ok_failed system("rsync --chmod=u+rwX,g+rwX,o+rX,o-w -avze 'ssh -p #{ssh_port}' #{exclude} #{"--delete" unless rsync_delete == false} #{public_dir}/ #{ssh_user}:#{document_root}")
-end
-
-task :success do
-  duration = (Time.now - @time).to_i
-  puts "\n## Compile time #{duration} seconds"
-  Notifu::show :message => "Build complete (#{duration} sec)", :title => "kenany.me", :type => :info, :time => 3 do |status|
-    p Notifu::ERRORS.include? status
-  end
 end
 
 def ok_failed(condition)
