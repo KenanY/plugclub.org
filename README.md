@@ -52,6 +52,23 @@ $ bundle install
 
 ## Changelog
 
+### 1.1.0 / 2012-08-18 / [browse](/KenanY/plugclub.org/tree/1.1.0) / [zip](/KenanY/plugclub.org/zipball/1.1.0) / [tar](/KenanY/plugclub.org/tarball/1.1.0)
+
+   * Front page redesign, complete with a cool tagline, random stats, columns of features, and a GitHub column tracking site updates
+   * Add `feed_entry.xml`
+   * Add async GA snippet
+   * Remove address bar on mobile devices
+   * Add Foundation jQuery plugins:
+     * Alets
+     * Buttons
+     * Accordian
+     * Navigation
+     * mediaQueryToggle
+     * Tabs
+   * Remove copyright hyphen
+   * Fix awkward wording in Officer bios
+   * Minify Foundation plugins
+
 ### 1.0.3 / 2012-08-12 / [browse](/KenanY/plugclub.org/tree/1.0.3) / [zip](/KenanY/plugclub.org/zipball/1.0.3) / [tar](/KenanY/plugclub.org/tarball/1.0.3)
 
    * Update jQuery to 1.8.0
