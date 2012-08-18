@@ -6,7 +6,7 @@ group :frontend do
     watch(/sass\/(.*)/)
   end
 
-  guard 'coffeescript', :input => 'source/js' #, :output => 'source/js'
+  guard 'coffeescript', :input => 'source/js/coffeescript', :output => 'source/js'
 
   guard "uglify",
     :input => [
