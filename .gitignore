@@ -71,4 +71,5 @@ source/_stash
 source/css/*.css
 source/img/icon-*.png
 source/js/main.js
+source/js/front-page.js
 source/js/plugclub.min.js
