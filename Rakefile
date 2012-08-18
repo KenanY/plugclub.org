@@ -1,7 +1,6 @@
 require "rubygems"
 require "bundler/setup"
 require "stringex"
-require "rake/minify"
 require "guard"
 
 ssh_user       = "kenany_plugclub@ssh.phx.nearlyfreespeech.net"
@@ -23,21 +22,20 @@ server_port     = "1337"      # port for preview server eg. localhost:4000
 
 desc "Generate jekyll site"
 task :generate do
-  puts "## Generating Site with Jekyll"
-  system "compass compile --css-dir #{source_dir}/css"
-  Rake::Task['minify_and_combine'].execute
-  system "jekyll"
-end
+  puts "## Generating Site with Guard"
 
-Rake::Minify.new(:minify_and_combine) do
-  puts "BEGIN Minifying plug.min.js"
-  dir("#{source_dir}/js") do
-    group("#{source_dir}/js/plug.min.js") do
-      add("plugins.js")
-      add("main.coffee")
-    end
-  end
-  puts "END Minifying plug.min.js"
+  Guard.setup({
+    :no_interactions => true,
+    :group => ['frontend']
+  })
+
+  # guard-compass doesn't set itself up properly unless its create_updater
+  # method is triggered. Since that is private, we have to fudge it by
+  # triggering a reload of the guard configuration. We can't trigger
+  # Guard.start as that triggers the file listener, which we don't want.
+  Guard.reload({})
+
+  Guard.run_all({})
 end
 
 # usage rake generate_only[my-post]
@@ -57,33 +55,30 @@ end
 
 desc "Watch the site and regenerate when it changes"
 task :watch do
-  puts "Starting to watch source with Jekyll and Compass."
-  system "compass compile --css-dir #{source_dir}/css"
-  jekyllPid = Process.spawn("jekyll --auto")
-  compassPid = Process.spawn("compass watch")
-  guardPid = Process.spawn("guard")
+  raise "### You haven't set anything up yet. First run `rake install` to set up an Octopress theme." unless File.directory?(source_dir)
+  puts "Starting to watch source with Guard."
+  puts "'rake watch' is now a synonym for 'guard'. You should run that instead"
+  guardPid = Process.spawn("bundle exec guard --no-interactions")
   trap("INT") {
-    [jekyllPid, compassPid, guardPid].each { |pid| Process.kill(9, pid) rescue Errno::ESRCH }
+    [guardPid].each { |pid| Process.kill(9, pid) rescue Errno::ESRCH }
     exit 0
   }
-  [jekyllPid, compassPid, guardPid].each { |pid| Process.wait(pid) }
+  [guardPid].each { |pid| Process.wait(pid) }
 end
 
 desc "preview the site in a web browser"
 task :preview do
-  puts "Starting to watch source with Jekyll and Compass. Starting Rack on port #{server_port}"
-  system "compass compile --css-dir #{source_dir}/css"
-  jekyllPid = Process.spawn("jekyll --auto")
-  compassPid = Process.spawn("compass watch")
-  guardPid = Process.spawn("guard")
+  raise "### You haven't set anything up yet. First run `rake install` to set up an Octopress theme." unless File.directory?(source_dir)
+  puts "Starting to watch source with Guard. Starting Rack on port #{server_port}"
+  guardPid = Process.spawn("bundle exec guard --no-interactions")
   rackupPid = Process.spawn("rackup --port #{server_port}")
 
   trap("INT") {
-    [jekyllPid, compassPid, guardPid, rackupPid].each { |pid| Process.kill(9, pid) rescue Errno::ESRCH }
+    [guardPid, rackupPid].each { |pid| Process.kill(9, pid) rescue Errno::ESRCH }
     exit 0
   }
 
-  [jekyllPid, compassPid, guardPid, rackupPid].each { |pid| Process.wait(pid) }
+  [guardPid, rackupPid].each { |pid| Process.wait(pid) }
 end
 
 # usage rake isolate[my-post]

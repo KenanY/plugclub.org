@@ -1,8 +1,3 @@
----
----
-
-
-
 addCommas = (nStr) ->
   nStr += ''
   x = nStr.split('.')
