@@ -24,7 +24,7 @@ The Pace Linux User Group (otherwise known as P.L.U.G.) is a place of joy and Li
             <h1>Arturo Bory</h1>
             <h2>Vice-president</h2>
         </header>
-        <p>Born from the kernel of Unix and coded in Pascal, has grown from his small beginnings on the streets of Zimbabwe to reach the level of vice-president of the Pace Linux User Group. He (or it) has been credited with the idea of starting a Linux user group, though as he/it is the one writing this, imagine he/it saying this humbly, or he/it might seem like a dick, which he/it may or may not be. She (is it a typo?) hopes to start more Linux user groups in different high schools to show the benefits of Linux to more and more people, with the eventual goal of having Linux be the new Windows and FreeBSD be the old Linux.</p>
+        <p>Born from the kernel of Unix and coded in Pascal, Arturo has grown from his small beginnings on the streets of Zimbabwe to reach the level of vice-president of the Pace Linux User Group. He (or it) has been credited with the idea of starting a Linux user group, though as he/it is the one writing this, imagine he/it saying this humbly, or he/it might seem like a dick, which he/it may or may not be. She (is it a typo?) hopes to start more Linux user groups in different high schools to show the benefits of Linux to more and more people, with the eventual goal of having Linux be the new Windows and FreeBSD be the old Linux.</p>
     </div>
     <div class="panel radius kenan">
         <header>
@@ -38,7 +38,7 @@ The Pace Linux User Group (otherwise known as P.L.U.G.) is a place of joy and Li
             <h1>Alexis Almonte</h1>
             <h2>Secretary</h2>
         </header>
-        <p>The illegitimate child of Paul Simon and Art Garfunkel, has amazing potential as a guitarist, and as an even greater achievement runs Linux on his computer. His witty sense of humor and his gigantic pair of glasses have landed him a position as secretary of the Pace Linux User Group. And when this bio says "landed," it means forced, seeing as he needs some sort of extracurricular activity to get into a good college. He's welcome.</p>
+        <p>The illegitimate child of Paul Simon and Art Garfunkel, Alexis has amazing potential as a guitarist, and as an even greater achievement runs Linux on his computer. His witty sense of humor and gigantic pair of glasses have landed him a position as secretary of the Pace Linux User Group. And when this bio says "landed," it means forced, seeing as he needs some sort of extracurricular activity to get into a good college. He's welcome.</p>
     </div>
     <div class="panel radius jp">
         <header>
