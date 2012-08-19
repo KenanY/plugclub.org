@@ -28,7 +28,9 @@ body > header h2 {
 body > header a {
     @include link-colors($txtColor, $txtColor, $visited: $txtColor);
 }
-
+.subheader{
+    font-size: ms(3);
+}
 body {
     line-height: 1.5em;
     color: $txtColor;
@@ -163,7 +165,7 @@ big { font-size: 1.2em; }
     h2.tagline {
         font-size: 63px;
         font-weight: normal;
-        color: #180F01;
+        color: $txtColor;
         text-shadow: 0 2px 0 #fff;
         margin: 0 0 .3em 0;
         line-height: 1;
@@ -175,5 +177,5 @@ ul.stats li {
     font-size: 25px;
     margin-right: 40px;
     font-weight: 200;
-    color: #2A2111;
+    color: $txtColorLight; //#2A2111;
 }

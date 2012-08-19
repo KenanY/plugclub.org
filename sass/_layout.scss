@@ -10,6 +10,7 @@ body {
     margin: 0 auto;
     > header, > nav, > footer, #content > article, #content > div > article, #content > div > section {
         @extend .group;
+        background-color: $main-bg;
         padding-left: $pad-min;
         padding-right: $pad-min;
         @media only screen and (min-width: 480px) {

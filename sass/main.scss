@@ -8,10 +8,12 @@
 // ==========================================================================
 @import "compass";
 
+@import "modular-scale";
 @import "settings";
 @import "foundation";
 
 @import "utilities";
+@import "theme";
 @import "layout";
 @import "typography";
 
@@ -147,10 +149,6 @@
     position: relative;
     width: 100%;
     padding: 1em 0;
-    //background-color: #7DB4B5;
-}
-#homepageFeatures{
-    //background-color: #E0EFF1;
 }
 
 

@@ -1,0 +1,20 @@
+a {
+    color: $link-color;
+    @include link-colors($link-color, $hover: $link-color-hover, $focus: $link-color-hover, $visited: $link-color-visited, $active: $link-color-active);
+    @include transition(color .3s);
+}
+
+
+html {
+    background-color: $page-bg;
+}
+body {
+    > div {
+        background-color: $page-bg;
+        border-bottom: 1px solid $type-border;
+        > div {
+            background-color: $main-bg;
+            border-right: 1px solid $type-border;
+        }
+    }
+}
