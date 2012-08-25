@@ -56,10 +56,7 @@ $(document).ready(->
       $('a.commit').html "#{ latest.sha.substring(0, 7) }"
       $('a.commit').attr 'href', "https://github.com/KenanY/plugclub.org/commit/#{ latest.sha }"
   if Modernizr.touch
-    $(window).load ->
-      setTimeout ->
-        window.scrollTo 0, 1
-      , 0
+    MBP.hideUrlBar()
 )
 
 
