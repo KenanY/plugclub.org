@@ -4,8 +4,7 @@ a {
     @include transition(color .3s);
 }
 
-
-html {
+html, body {
     background-color: $page-bg;
 }
 body {
