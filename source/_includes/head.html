@@ -11,7 +11,7 @@
     {% capture description %}{% if page.description %}{{ page.description }}{% elsif site.description %}{{ site.description }}{% endif %}{% endcapture %}
     {% if description.length %}
         <meta name="description" content="{{ description }}">
-        <meta property="og:description" content="">
+        <meta property="og:description" content="{{ description }}">
         <meta name="msapplication-tooltip" content="{{ description }}">
     {% endif %}
     {% if page.keywords %}<meta name="keywords" content="{{ page.keywords }}">{% endif %}
