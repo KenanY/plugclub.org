@@ -55,6 +55,7 @@ $(document).ready(->
       latest = json.data[0]
       $('a.commit').html "#{ latest.sha.substring(0, 7) }"
       $('a.commit').attr 'href', "https://github.com/KenanY/plugclub.org/commit/#{ latest.sha }"
+      $('a.commit').attr 'title', "#{ latest.commit.message }"
   if Modernizr.touch
     MBP.hideUrlBar()
 )
