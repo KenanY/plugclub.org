@@ -52,6 +52,20 @@ $ bundle install
 
 ## Changelog
 
+### 1.2.0 / 2012-08-25 / [browse](/KenanY/plugclub.org/tree/1.2.0) / [zip](/KenanY/plugclub.org/zipball/1.2.0) / [tar](/KenanY/plugclub.org/tarball/1.2.0)
+
+   * Use real black
+   * Gray-ish background
+   * No more Google Web Fonts
+   * Remove GitHub column and instead put the latest commit SHA in the footer
+   * Fix blank OG description
+   * Add meta Twitter description and title
+   * Use Fayer.js for page-specific javascript
+   * Use Alea.js for random number generation
+   * Use MBP helper.js to hide URL bar on mobile devices
+   * Kitty placeholder where GitHub column used to be
+   * Rewrite homepage features so that open-source doesn't clog our minds
+
 ### 1.1.0 / 2012-08-18 / [browse](/KenanY/plugclub.org/tree/1.1.0) / [zip](/KenanY/plugclub.org/zipball/1.1.0) / [tar](/KenanY/plugclub.org/tarball/1.1.0)
 
    * Front page redesign, complete with a cool tagline, random stats, columns of features, and a GitHub column tracking site updates
