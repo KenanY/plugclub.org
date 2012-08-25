@@ -7,6 +7,8 @@
     <meta charset="utf-8">
     <link rel="dns-prefetch" href="//ajax.googleapis.com">
     <title>{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}</title>
+    <meta property="og:title" content="{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}">
+    <meta property="twitter:title" content="{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}">
     <meta name="author" content="{{ site.author }}">
     {% capture description %}{% if page.description %}{{ page.description }}{% elsif site.description %}{{ site.description }}{% endif %}{% endcapture %}
     {% if description.length %}
@@ -16,14 +18,12 @@
         <meta name="msapplication-tooltip" content="{{ description }}">
     {% endif %}
     {% if page.keywords %}<meta name="keywords" content="{{ page.keywords }}">{% endif %}
-    <meta property="og:title" content="{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}">
-    <meta property="twitter:title" content="{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}">
     <meta name="viewport" content="width=device-width">
     <meta http-equiv="cleartype" content="on">
     <meta http-equiv="imagetoolbar" content="false">
     {% capture canonical %}{{ site.url }}{% if site.permalink contains '.html' %}{{ page.url }}{% else %}{{ page.url | remove:'index.html' }}{% endif %}{% endcapture %}
-    <meta name="msapplication-starturl" content="{{ canonical }}">
     <link rel="canonical" href="{{ canonical }}">
+    <meta name="msapplication-starturl" content="{{ canonical }}">
     <link href="/favicon.png" rel="icon">
     <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
     <link href="{{ site.subscribe_rss }}" rel="alternate" title="{{site.title}}" type="application/atom+xml">
