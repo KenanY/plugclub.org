@@ -10,7 +10,7 @@
   * ZURB's [Foundation] is used as a responsive grid.
   * [jQuery] is used for plugins and stuff.
   * [Modernizr] is used mostly as a script loader (actually [yepnope.js]), but there is some minor feature-testing involed in the site.
-  * One the front page, there's a counter which increases in random increments. To generate better pseudo-random numbers, [Alea.js] is used (with it's dependency: [Mash.js]).
+  * On the front page, there's a counter which increases in random increments. To generate better pseudo-random numbers, [Alea.js] is used (with its dependency: [Mash.js]).
   * The primary javascript file (`main.js`) is generated from `main.coffee`, which is naturally written in [CoffeeScript].
   * Page-specific javascript is handled by [Fayer.js].
   * `plugins.js` and `main.js` are concatenated and minified by [UglifyJS] through the [uglifier] gem.
