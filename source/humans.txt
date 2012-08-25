@@ -28,7 +28,7 @@
 
 /* SITE */
     Version: 1.2.0
-    Last update: 2012-08-18
+    Last update: 2012-08-25
     Language: English
     Doctype: HTML5
     Standards: HTML5 and CSS3
