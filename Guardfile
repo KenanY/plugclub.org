@@ -18,7 +18,7 @@ group :frontend do
   end
 
   guard "jekyll" do
-    watch(/^source\/(.*)/)
+    watch(/^source(.*)/)
   end
 end
 
@@ -26,6 +26,6 @@ guard 'bundler' do
   watch('Gemfile')
 end
 
-guard "livereload" do
-  watch(/^_site(.*)/)
-end
+# guard "livereload" do
+#   watch(/^_site(.*)/)
+# end

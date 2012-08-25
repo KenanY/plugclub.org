@@ -23,12 +23,6 @@ cobbleLoop = ->
   curNum = parseInt(curNum, 10)
   newNum = curNum + incrementBy
   $('#cobble').html(formatNumber(newNum))
-  ###
-  i = 0
-  while i < incrementBy
-    $('#cobble').html(formatNumber(curNum + 1))
-    i++
-  ###
 
 
 
@@ -39,12 +33,8 @@ $(document).ready(->
     dataType: 'jsonp',
     success: (json) ->
       latest = json.data[0]
-      stamp = new Date(latest.commit.committer.date)
-      stampString = "#{ month[stamp.getMonth()] } #{ stamp.getDate() }, #{ stamp.getFullYear() }"
-      $('#github .description').text latest.commit.message
-      $('#github .date').text stampString
-      $('#github .commit').html "Commit #{ latest.sha } &raquo;"
-      $('#github .commit').attr 'href', "https://github.com/KenanY/plugclub.org/commit/#{ latest.sha }"
+      $('a.commit').html "#{ latest.sha.substring(0, 7) }"
+      $('a.commit').attr 'href', "https://github.com/KenanY/plugclub.org/commit/#{ latest.sha }"
 
   setInterval(cobbleLoop, 3000)
 )

@@ -101,11 +101,11 @@ $importantModNum: 50px;
 // Typography
 // ==========================================================================
 $blockquote: $type-border;
-$sans: "Open Sans Bold", "Helvetica Neue", Arial, sans-serif;
-$serif: "PT Serif", Georgia, Times, "Times New Roman", serif;
+$sans: myriad-pro, 'Myriad Pro', 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', Geneva, Verdana, sans-serif;
+$serif: Georgia, Cambria, "Times New Roman", Times, serif;
 $mono: Menlo, Monaco, "Andale Mono", "lucida console", "Courier New", monospace;
 $bodyFontFamily: $serif;
-$heading-font-family: "PT Serif", "Georgia", "Helvetica Neue", Arial, sans-serif;
+$heading-font-family: "Georgia", "Helvetica Neue", Arial, sans-serif;
 $header-title-font-family: $sans;
 $header-subtitle-font-family: $sans;
 $header-font-size: 1em;

@@ -32,7 +32,7 @@
             </div>
         </div>
     </footer>
-    {% if page.front_page %}
+    {% if page.front-page %}
         <script>
           Modernizr.load([
             {
@@ -48,6 +48,6 @@
           ]);
         </script>
     {% endif %}
-    {% include after_footer.html %}
+    {% unless page.front-page %}{% include after_footer.html %}{% endunless %}
 </body>
 </html>
