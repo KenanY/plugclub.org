@@ -192,3 +192,10 @@ this).hover(function(){$(this).children(".flyout").show()},function(){$(this).ch
 */
 (function($){$.fn.foundationTabs=function(options){var settings=$.extend({callback:$.noop},options);var activateTab=function($tab){var $activeTab=$tab.closest("dl").find("dd.active"),contentLocation=$tab.children("a").attr("href")+"Tab";contentLocation=contentLocation.replace(/^.+#/,"#");$activeTab.removeClass("active");$tab.addClass("active");$(contentLocation).closest(".tabs-content").children("li").removeClass("active").hide();$(contentLocation).css("display","block").addClass("active")};$(document).on("click.fndtn",
 "dl.tabs dd a",function(event){activateTab($(this).parent("dd"))});if(window.location.hash){activateTab($('a[href="'+window.location.hash+'"]').parent("dd"));settings.callback()}}})(jQuery);
+
+
+
+
+
+/* Fayer.js v1.0.4 - by Sandeep Jain */
+(function(c){var d,f;d="";f=!1;jQuery.fayer=new function(){var b=this;b.init=function(a){return b.detectPage(a)};b.detectPage=function(a){d=(c.type(a)==="function"?a:function(){a=c.type(a)==="string"&&a!==""?a:"id";return c("body").attr(a)})()||"";f=!0;return b};b.on=function(a,d){f===!1&&(b.init(),f=!0);if(c.type(a)==="function")a();else if(c.type(a)==="object")for(var e in a)a.hasOwnProperty(e)&&b.on(e,a[e]);else b.isIn(a)&&c.type(d)==="function"&&d();return b};b.notOn=function(a,d){if(c.type(a)=== "object")for(var e in a)a.hasOwnProperty(e)&&b.notOn(e,a[e]);else!b.isIn(a)&&b.on(d);return b};b.is=function(a){return a===d};b.isIn=function(a){return c.type(a)==="regexp"?a.test(d):b.is(a)?!0:c.type(a)==="array"&&c.inArray(d,a)!==-1}}})(jQuery);

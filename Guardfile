@@ -14,7 +14,8 @@ group :frontend do
       "source/js/main.js"
     ],
     :output => "source/js/plugclub.min.js" do
-    watch(/^source\/js\/(.*)\.js/)
+    watch('source/js/plugins.js')
+    watch('source/js/main.js')
   end
 
   guard "jekyll" do
